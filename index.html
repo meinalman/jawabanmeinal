@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAWABAN SAYA</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  </head>
+  <style>
+    .center {
+      text-align: center;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 2em;
+      font-weight: 600;
+      color: red;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    ons-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Menyesuaikan konten agar tersebar di seluruh halaman */
+      height: 100vh; /* Mengatur tinggi halaman sama dengan viewport */
+    }
+
+    img {
+      margin-left: 18px; /* Memusatkan gambar */
+      margin-bottom: 8px;
+      max-width: 90%; /* Membuat lebar gambar maksimal 100% dari kontainer */
+      max-height: 90%; /* Membuat tinggi gambar maksimal 100% dari kontainer */
+    }
+
+    /* Mengatur agar isi tidak melebihi viewport */
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .heart-animation {
+      display: inline-block;
+      animation: pulse 1s infinite;
+    }
+  </style>
+  <body>
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">♨ JAWABAN ♨</div>
+      </ons-toolbar>
+
+      <div style="height: 90px; padding: 1px 0 0 0">
+        <div class="card">
+          <div class="card__content" style="text-align: center">
+            Berikut adalah jawaban dari 10 buah pertanyaan yang kamu lontarkan
+            kemarin sayang 😁😍
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <ons-button onclick="window.location.href='jawaban.html';"
+          >Cek Jawaban</ons-button
+        >
+      </div>
+
+      <img src="img.jpg" alt="" />
+
+      <ons-footer>
+        <div
+          class="footer"
+          style="
+            text-align: center;
+            background-color: blue;
+            color: #eaeaea;
+            padding: 8px 0;
+            margin-top: 5px;
+          "
+        >Designed With <span class="heart-animation">💝</span> by MeinaL
+        </div>
+      </ons-footer>
+    </ons-page>
+  </body>
+</html>
